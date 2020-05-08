@@ -1,0 +1,2 @@
+0 string1.txt first
+1 string2.txt second
