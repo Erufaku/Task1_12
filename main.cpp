@@ -57,23 +57,12 @@ int main()
 
 	}
 	inputFile.close();
-	int nErrors = 0;
-	for(int i =0; i < (int)strings.size(); ++i){
-		ofstream outputFile(strings[i]->FindFile());
-		if(!outputFile){
-			++nErrors;
-			continue;
-		}
-		strings[i]->output(outputFile);
-		outputFile.close();
-	}
-	for(auto& ptr : strings){
-				delete ptr;
-	}
-	if(nErrors > 0){
-		cerr << "Error! Missing files!" << endl;
-		return -2;
-	}
+    auto strIt = strings.begin();
+    int nErrors = 0;
+    while (strIt != strings.end()) {
+        (*strIt)->output();
+        ++strIt;
+    }
     return 0;
 }
 
