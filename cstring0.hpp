@@ -1,7 +1,7 @@
 /*
  * cstring0.h
  *
- *  Created on: 7 мая 2020 г.
+ *  Created on: 7 Г¬Г Гї 2020 ГЈ.
  *      Author: coolg
  */
 
@@ -19,7 +19,7 @@ public:
     cstring0(const cstring& other):cstring(other){};
 	cstring0(const cstring0 &other);
 	using cstring::operator =;
-	void output(std::ostream &stream) const override final;
+	void output() const override final;
 };
 cstring0 operator+(const cstring& left, const cstring& right);
 #endif /* SRC_CSTRING0_H_ */
