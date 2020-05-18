@@ -6,6 +6,8 @@
  */
 
 #include "cstring1.hpp"
+#include <fstream>
+#include <sstream>
 void cstring1::output() const {
 	 ofstream outputFile(this->getFilename());
 	 if (!outputFile) {
