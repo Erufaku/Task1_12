@@ -31,7 +31,7 @@ public:
         }
     }
     cstring& operator=(const char* other);
-    virtual void output(std::ostream &stream) const = 0;
+    virtual void output() const = 0;
 };
 bool operator==(const cstring& lhs, const cstring& rhs);
 bool operator!=(const cstring& lhs, const cstring& rhs);
