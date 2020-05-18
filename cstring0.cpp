@@ -1,16 +1,23 @@
 /*
  * cstring0.cpp
  *
- *  Created on: 7 мая 2020 г.
+ *  Created on: 7 Г¬Г Гї 2020 ГЈ.
  *      Author: coolg
  */
-
+#include <fstream>
+#include <sstream>
 #include "cstring0.hpp"
 void cstring0::output(std::ostream &stream) const {
-	for(int i=0; i< FindLength(); ++i){
-		stream << FindElement(i);
+    ofstream outputFile(this->getFilename());
+    if (!outputFile) {
+        std::cout << "Can't find file!" << endl;
+        exit(-2);
+    }
+    for (int i = 0; i < FindLength(); ++i) {
+	    outputFile << FindElement(i);
 	}
-	stream << '\n';
+    outputFile << '\n';
+    outputFile.close();
 }
 cstring0 operator+(const cstring& left, const cstring& right){
     int l = left.FindLength();
