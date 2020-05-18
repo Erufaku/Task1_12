@@ -1,16 +1,22 @@
 /*
  * cstring1.cpp
  *
- *  Created on: 7 мая 2020 г.
+ *  Created on: 7 Г¬Г Гї 2020 ГЈ.
  *      Author: coolg
  */
 
 #include "cstring1.hpp"
-void cstring1::output(std::ostream &stream) const {
-	 for (int i = 0; i < this->FindLength(); ++i) {
-	            stream << this->FindElement(i);
-	            if (i != FindLength()-1) {
-	                stream << "\n";
-	            }
-	        }
+void cstring1::output() const {
+	 ofstream outputFile(this->getFilename());
+	 if (!outputFile) {
+		 std::cout << "Can't find file!" << endl;
+		 exit(-2);
+	 }
+	 for (int i = 0; i < FindLength(); ++i) {
+		 outputFile << FindElement(i);
+	     if (i != FindLength() - 1) {
+			 outputFile << '\n';
+	     }
+	 }
+	 outputFile.close();
 	    }
