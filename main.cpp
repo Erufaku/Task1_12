@@ -33,12 +33,14 @@ int main()
 		char *outputFilename_, *str_;
 		outputFilename_ = new char[outputFilename.size() + 1];
 		str_ = new char[str.size() + 1];
-		for(int i=0;i < (int)outputFilename.size();i++){
+		std::strcpy(outputFilename_, outputFilename.c_str());
+		std::strcpy(str_, str.c_str());
+		/*for(int i=0;i < (int)outputFilename.size();i++){
 			outputFilename_[i] = outputFilename[i];
 		}
 		for(int i=0;i < (int)str.size();i++){
 					str_[i] = str[i];
-		}
+		}*/
 		cstring* newCstring = nullptr;
 		switch(stringType){
 		case 0:
