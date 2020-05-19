@@ -7,6 +7,7 @@
 #include <fstream>
 #include <sstream>
 #include "cstring0.hpp"
+using namespace std;
 void cstring0::output() const {
     ofstream outputFile(this->getFilename());
     if (!outputFile) {
