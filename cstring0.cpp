@@ -7,7 +7,7 @@
 #include <fstream>
 #include <sstream>
 #include "cstring0.hpp"
-void cstring0::output(std::ostream &stream) const {
+void cstring0::output() const {
     ofstream outputFile(this->getFilename());
     if (!outputFile) {
         std::cout << "Can't find file!" << endl;
