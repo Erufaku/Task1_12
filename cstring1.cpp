@@ -8,6 +8,8 @@
 #include "cstring1.hpp"
 #include <fstream>
 #include <sstream>
+using namespace std;
+	
 void cstring1::output() const {
 	 ofstream outputFile(this->getFilename());
 	 if (!outputFile) {
