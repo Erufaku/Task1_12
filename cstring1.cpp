@@ -11,7 +11,7 @@
 using namespace std;
 	
 void cstring1::output() const {
-	 ofstream outputFile(this->getFilename());
+	 ofstream outputFile(this->FindFile());
 	 if (!outputFile) {
 		 std::cout << "Can't find file!" << endl;
 		 exit(-2);
